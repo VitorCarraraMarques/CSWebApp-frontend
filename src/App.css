@@ -1,0 +1,56 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: top;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.projects-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: flex-start; 
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1em; 
+  padding: 1em;
+  border-radius: 1em;
+  position: relative;
+  display: block;
+  flex: 1 1 0px;
+  transition: transform 500ms;
+  background-color: antiquewhite;
+  color: gray;
+  width: 80%;
+}
+
+.projects-list .card:focus,
+.projects-list .card:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.card:hover {
+  filter: drop-shadow(0 0 2em #121435aa);
+}
+
+.card-name {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.card-desc {
+  display: none; 
+}
+
+.card:hover .card-desc{
+  display: block; 
+}
+
