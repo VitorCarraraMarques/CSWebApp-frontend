@@ -27,10 +27,6 @@ function App() {
   
   return (
     <div className="App">
-      
-      <h1 className="section-name">
-        PROJETOS
-      </h1>
 
       <ProjectsList projects={projectsInfo} />      
 
