@@ -65,6 +65,14 @@ body {
   color: gray;
 }
 
+.card:focus,
+.card:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  filter: drop-shadow(0 0 2em #121435aa);
+  background-color: rgb(28, 28, 28); 
+}
+
 .card-cover {
   background: none;
   max-width: 100%;
@@ -77,22 +85,39 @@ body {
 }
 
 .card-info {
-  display: block;
-  scale: 0;  
+  display: flex;
+  justify-content: space-around;
+  scale: 0; 
 }
-
-.card:focus,
-.card:hover {
-  transform: scale(1.2);
-  z-index: 2;
-  filter: drop-shadow(0 0 2em #121435aa);
-  background-color: rgb(28, 28, 28);
-}
-
 
 .card:hover .card-info{
   scale: 1; 
   background-color: rgb(28, 28, 28);
   border-radius: 10px;
 }
+
+.links-wrapper {
+  max-width: 1000px;
+  display: flex; 
+  justify-content: flex-start;
+  gap: 1dvw;
+  align-items: center;
+}
+
+.github-link img,
+.ext-link img{
+  background-color: rgb(183, 182, 182);
+  max-width: 50px;
+  flex-grow: 1;  
+  border-radius: 3px;   
+}
+
+
+
+.github-link:hover img, 
+.ext-link:hover img {
+  background-color: rgb(100, 100, 100);
+}
+
+
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import ProjectsList from './ProjectsList'
+import ProjectsList from './components/ProjectsList'
 import './App.css';
 
 function App() {
