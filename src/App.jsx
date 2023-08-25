@@ -22,7 +22,6 @@ function App() {
       url,{
       cancelToken: new axios.CancelToken(c => cancel = c)
     }).then((res) => {
-      console.log(res.data)
       setLoading(false)
       setProjectsInfo(res.data)
     })
