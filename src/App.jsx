@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import ProjectsList from './ProjectsList'
+import ProjectsList from './components/ProjectsList'
 import './App.css';
 
 function App() {
@@ -11,8 +11,15 @@ function App() {
   useEffect( () => {
     setLoading(true)
     let cancel
+    let url 
+    if (process.env.NODE_ENV == 'development'){
+      url = 'http://localhost:8000/projects'
+    } else if (process.env.NODE_ENV == 'production'){
+      url = 'https://backend.carrarasoftware.com.br/projects/'
+    }  
+
     axios.get(
-      'http://localhost:8000/projects/',{
+      url,{
       cancelToken: new axios.CancelToken(c => cancel = c)
     }).then((res) => {
       setLoading(false)
@@ -27,10 +34,6 @@ function App() {
   
   return (
     <div className="App">
-      
-      <h1 className="section-name">
-        PROJETOS
-      </h1>
 
       <ProjectsList projects={projectsInfo} />      
 
