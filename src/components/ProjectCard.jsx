@@ -11,7 +11,7 @@ export default function ProjectCard( { proj } ) {
             </div>
             <div className="card-info">    
                 <LinkIcons links={[proj.ext_link, proj.repo_link]}/>
-                <ToolsIcons tools={proj.toolkit.tools}/>
+                <ToolsIcons tools={proj.toolkit.toolkit}/>
             </div>
         </div>
     )}
