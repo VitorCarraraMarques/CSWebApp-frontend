@@ -5,7 +5,7 @@ import ToolsIcons from './ToolsIcons'
 
 export default function ProjectCard( { proj } ) { 
     return ( 
-        <div className="card one">
+        <div className="card">
             <div className="card-cover"> 
                 <img className="card-gif" src={proj.cover} alt={"Gif do projeto " + proj.name} ></img>
             </div>
