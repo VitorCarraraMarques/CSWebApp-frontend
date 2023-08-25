@@ -1,16 +1,16 @@
 import React from 'react'
 
-import ajax from '../assets/ajax.svg'
-import css from '../assets/css.svg'
-import defaulticon from '../assets/default.svg'
-import django from '../assets/django.svg'
-import fastapi from '../assets/fastapi.svg'
-import html from '../assets/html.svg'
-import javascript from '../assets/javascript.svg'
-import kivy from '../assets/kivy.svg'
-import p5js from '../assets/p5js.svg'
-import pygame from '../assets/pygame.svg'
-import python from '../assets/python.svg'
+import ajax from '../assets/ajax.png'
+import css from '../assets/css.png'
+import defaulticon from '../assets/default.png'
+import django from '../assets/django.png'
+import fastapi from '../assets/fastapi.png'
+import html from '../assets/html.png'
+import javascript from '../assets/javascript.png'
+import kivy from '../assets/kivy.png'
+import p5js from '../assets/p5js.png'
+import pygame from '../assets/pygame.png'
+import python from '../assets/python.png'
 
 
 
