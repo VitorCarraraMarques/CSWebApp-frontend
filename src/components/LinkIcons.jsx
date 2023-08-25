@@ -8,9 +8,9 @@ export default function LinkIcons({ links }) {
     const ext_link = links[0]
     const repo_link = links[1]
     
-    if (ext_link == '' && repo_link == '') return <></>
+    if (ext_link == null && repo_link == null) return <></>
 
-    if (ext_link == ''){
+    if (ext_link == null){
         return (
             <div className="links-wrapper">
                 <a href={repo_link} className="github-link"> 
@@ -20,7 +20,7 @@ export default function LinkIcons({ links }) {
         )
     }
     
-    if (repo_link == ''){
+    if (repo_link == null){
         return (
             <div className="links-wrapper">
                 <a href={ext_link} className="ext-link"> 
