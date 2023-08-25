@@ -9,7 +9,7 @@ export default function ProjectsList( { projects } ) {
                 PROJETOS
             </h1>
             <div className="projects-list">
-                {projects.map((proj) => (
+                {projects?.map((proj) => (
                         <ProjectCard key={proj.id} proj={proj}/>
                 ))}
             </div>

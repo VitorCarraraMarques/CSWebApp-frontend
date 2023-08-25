@@ -21,7 +21,7 @@ export default function ToolsIcons({ tools }) {
             <h4 className="tools-header"> Toolkit: </h4>  
 
             <div className='tools-wrapper'>     
-                {tools.map(
+                {tools?.map(
                     (tool) => (
                         <img className='tool-img' src={findToolIcon(tool)} key={tool}/>
                     )
