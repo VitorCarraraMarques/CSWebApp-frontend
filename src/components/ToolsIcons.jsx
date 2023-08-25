@@ -23,7 +23,7 @@ export default function ToolsIcons({ tools }) {
             <div className='tools-wrapper'>     
                 {tools?.map(
                     (tool) => (
-                        <img className='tool-img' src={eval(tool)} key={tool}/>
+                        <img className='tool-img' src={findToolIcon(tool)} key={tool}/>
                     )
                 )}
             </div>
