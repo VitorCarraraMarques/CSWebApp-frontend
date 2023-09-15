@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard'
 
 export default function ProjectsList( { projects } ) { 
     return (        
-        <div className="card-grid">
+        <div className="card-grid" id="projects">
             <h1 className="section-name">
                 PROJETOS
             </h1>
