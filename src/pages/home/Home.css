@@ -10,24 +10,167 @@ body {
     margin: 0;
 }
 
+.page { 
+    width: 60dvw; 
+    margin: 0 auto;
+    padding: 0;
+}
+
+.section-name { 
+    margin: 0; 
+    margin-bottom: 0.6rem;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: solid var(--primary);   
+}
+
+/* #################################### HERO ###################################################################
+   ############################################################################################################# 
+   ############################################################################################################# */
+
+.loading-circle { 
+    position: absolute; 
+    left: calc(50% - 15dvw);
+    top: calc(50% - 15dvw); 
+    width: 30dvw;
+    aspect-ratio: 1;
+    border: 0.2em solid var(--accent);
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+
+/* #################################### HERO ###################################################################
+   ############################################################################################################# 
+   ############################################################################################################# */
+
+.hero { 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60dvw; 
+    margin: 0 auto; 
+    padding: 0; 
+    font-family: Verdana; 
+}
+
+.hero-logoName {
+    width: 100%;
+    max-width: 800px; 
+    padding: 5rem;  
+}
+
+
+/* #################################### NAV HOME ###################################################################
+   ############################################################################################################# 
+   ############################################################################################################# */
+.home-nav {
+    width: 60dvw; 
+    border-top: solid var(--primary);
+    border-bottom: solid var(--primary);
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.home-nav-link { 
+    margin: 0.5rem; 
+    padding: 0.5rem; 
+    color: var(--accent); 
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 10px; 
+}
+
+.home-nav-link:hover, 
+.home-nav-link:focus{
+    color: var(--accent-darker); 
+}
+
+.active { 
+    color: var(--text); 
+    background: var(--accent);
+}
+
+.active:hover,
+.active:focus{
+    color: var(--text); 
+    background: var(--accent);
+}
 
 /*############################################################################################################# 
-  #################################### PROJECTS ###############################################################
-  ############################################################################################################# */
+#################################### DEFAULT ###############################################################
+############################################################################################################# */
+
+.default {
+    padding: 2rem; 
+    width: 30dvw; 
+    min-width: 300px;
+    margin: 2.5rem auto; 
+    background: var(--primary); 
+    color: var(--text); 
+    border-radius: 10px; 
+    text-align: center;
+}
 
 
-.card-grid {
-    width: 60dvw; 
+/* #################################### ABOUT ###################################################################
+   ############################################################################################################# 
+   ############################################################################################################# */
+
+.about { 
     margin: 0 auto; 
 }
 
-.section-name {
+.about-card { 
+    margin: auto; 
+    margin-top: 2.5rem;
+    font-size: 1.5em;
+    width: 40%; 
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+    border-radius: 1em; 
+    padding: 0.5rem; 
+}
+
+.about-card>h3 {
     text-align: center;
-    border-top: solid var(--primary);
+}
+
+
+/*############################################################################################################# 
+#################################### PROJECTS ###############################################################
+############################################################################################################# */
+
+
+.projects {
+    width: 60dvw; 
+    margin: 0 auto;
+    padding: 0;
+}
+
+.projects-name {
+    margin: 0; 
+    margin-bottom: 0.6rem;
+    font-size: 2rem;
+    text-align: center;
     border-bottom: solid var(--primary);
 }
 
-.projects-list{
+.projects-card-grid{
+    margin-top: 2.5rem; 
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     grid-auto-rows: 12vw; 
@@ -142,65 +285,6 @@ body {
 }
 
 
-/* #################################### HERO ###################################################################
-   ############################################################################################################# 
-   ############################################################################################################# */
-
-
-.hero { 
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 60dvw; 
-    margin: 0 auto; 
-    padding: 0; 
-    font-family: Verdana; 
-}
-
-.hero-logoName {
-    width: 100%;
-    max-width: 800px; 
-    padding: 5rem;  
-}
-
-.hero-info { 
-    width: 100%; 
-    margin: 4rem; 
-    padding: 0.5rem;
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 1.2rem;  
-}
-
-.hero-info-text { 
-    font-size: 1.5em;
-    width: 40%; 
-    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-    border-radius: 1em; 
-    padding: 0.5rem; 
-}
-
-.hero-info-nav{
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 2rem; 
-    color: var(--accent); 
-    padding: 0.5rem; 
-}
-
-.hero-info-nav-link {
-    color: inherit; 
-    text-decoration: none;
-
-}
-
-
 /* #################################### MEDIA QUERIES ###################################################################
    ############################################################################################################# 
    ############################################################################################################# */
@@ -210,7 +294,7 @@ body {
 
 @media only screen and (max-width: 1280px){
     
-    .projects-list{
+    .projects-card-grid{
         grid-template-columns: repeat(2, 2fr); 
         grid-auto-rows: 18vw;
         max-width: 900px;
@@ -232,7 +316,7 @@ body {
 }
 
 @media only screen and (max-width: 950px){
-    .projects-list{
+    .projects-card-grid{
         max-width: 900px; 
         grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: 35vw; 

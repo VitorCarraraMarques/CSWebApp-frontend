@@ -2,13 +2,13 @@ import React from 'react'
 
 import ProjectCard from './ProjectCard'
 
-export default function ProjectsList( { projects } ) { 
+export default function Projects( { projects } ) { 
     return (        
-        <div className="card-grid" id="projects">
+        <div className="projects page" id="projects">
             <h1 className="section-name">
                 PROJETOS
             </h1>
-            <div className="projects-list">
+            <div className="projects-card-grid">
                 {projects?.map((proj) => (
                         <ProjectCard key={proj.id} proj={proj}/>
                 ))}
