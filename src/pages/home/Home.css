@@ -28,10 +28,8 @@ body {
    ############################################################################################################# 
    ############################################################################################################# */
 
-.loading-circle { 
-    position: absolute; 
-    left: calc(50% - 15dvw);
-    top: calc(50% - 15dvw); 
+.loading-circle {
+    margin: 0 auto; 
     width: 30dvw;
     aspect-ratio: 1;
     border: 0.2em solid var(--accent);
@@ -261,27 +259,31 @@ body {
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px; 
 }
 
 .tools-header{
     margin: 0 0; 
+    padding: 0 0; 
     font-size: 1.2rem;
     text-align: center;
 }
 
 .tools-wrapper{
+    border: solid var(--text);
     margin: 0 0; 
+    margin-bottom: 0.4rem;
     padding: 0.5rem;
     max-width: 250px;
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr);
+    display: flex; 
+    flex-wrap: wrap;
     gap: 1dvw;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .tool-img {
-    width: 3dvw;
+    width: 2.5dvw;
+    margin: 0.1rem;
 }
 
 
