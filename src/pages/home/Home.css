@@ -5,7 +5,7 @@ html {
 
 body {
     min-width: 320px;
-    min-height: 100dvh;  
+    min-height: 150dvh;  
     padding: 0;
     margin: 0;
 }
@@ -24,7 +24,7 @@ body {
     border-bottom: solid var(--primary);   
 }
 
-/* #################################### HERO ###################################################################
+/* #################################### LOADING ################################################################
    ############################################################################################################# 
    ############################################################################################################# */
 
@@ -98,13 +98,13 @@ body {
     color: var(--accent-darker); 
 }
 
-.active { 
+.active-link { 
     color: var(--text); 
     background: var(--accent);
 }
 
-.active:hover,
-.active:focus{
+.active-link:hover,
+.active-link:focus{
     color: var(--text); 
     background: var(--accent);
 }
@@ -133,18 +133,54 @@ body {
     margin: 0 auto; 
 }
 
-.about-card { 
-    margin: auto; 
-    margin-top: 2.5rem;
-    font-size: 1.5em;
-    width: 40%; 
-    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-    border-radius: 1em; 
-    padding: 0.5rem; 
+.about-topic {
+    width: 100%;
 }
 
-.about-card>h3 {
-    text-align: center;
+.about-topic-header{
+    font-size: 1.5rem;
+    border-bottom: solid var(--text) 0.05rem;
+}
+
+.about-topic-header :hover{
+    cursor: pointer; 
+}
+
+.about-topic-header-arrow{
+    display: inline-block;
+    width: fit-content;
+    aspect-ratio: 1;
+}
+
+.arrow-rotated{
+    transform-origin: center;
+    transform: rotate(90deg);
+}
+
+.about-topic-header-name{
+    font-weight: 600;
+}
+
+
+.about-topic-content{
+    display: none; 
+    
+}
+
+.content-visible {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-topic-content-text{
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+.about-topic-content-image{  
+    width: 70%; 
 }
 
 
@@ -190,8 +226,8 @@ body {
 .card:hover {
     transform: scale(1.2);
     z-index: 2;
-    filter: drop-shadow(0 0 2em #121435aa);
-    background-color: var(--primary); 
+    filter: drop-shadow(0 0 1rem #321653aa);
+    background-color: var(--accent); 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; 
 }
@@ -209,6 +245,7 @@ body {
 }
 
 .card-info {
+    padding: 0.5rem;
     display: flex;
     justify-content: space-around;
     scale: 0; 
@@ -217,7 +254,7 @@ body {
 .card:focus .card-info,
 .card:hover .card-info{
     scale: 1; 
-    background-color: var(--primary);
+    background-color: var(--accent);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;  
 }
@@ -242,20 +279,22 @@ body {
 .github-link,
 .ext-link{
     margin: 0 0; 
-    width: 50%; 
+    width: 50%;
+    aspect-ratio: 1; 
     display: flex; 
     justify-content: center;
-    background-color: var(--text); 
+    background-color: var(--accent); 
     border-radius: 100%;
     padding: 0.5em; 
 }
 
 .github-link:hover, 
 .ext-link:hover{
-    background-color: hsl(0, 0%, 80%);
+    background-color: var(--accent-darker);
 }
 
 .tools-section {
+    width: 60%;
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
@@ -282,7 +321,7 @@ body {
 }
 
 .tool-img {
-    width: 2.5dvw;
+    width: 1.5dvw;
     margin: 0.1rem;
 }
 

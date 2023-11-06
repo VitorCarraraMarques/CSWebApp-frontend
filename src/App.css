@@ -7,6 +7,7 @@
   min-width: 100%; 
 
   --text: rgb(255, 255, 255);
+  --text-darker: rgb(200, 200, 200);
   --background: rgb(16, 1, 35);
   --primary: rgb(100, 71, 133);
   --secondary: rgb(41, 22, 65);
